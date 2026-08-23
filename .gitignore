@@ -1,2 +1,4 @@
 .claude
-en.subject.pdf
+python07_subject.pdf
+__pycache__
+.mypy_cache
