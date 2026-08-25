@@ -9,7 +9,7 @@ class Sproutling(Creature, HealCapability):
         return f"{self.name} uses Vine Whip!"
 
     def heal(self) -> str:
-        return f"{self.name} uses Photosynthesis!"
+        return f"{self.name} heals itself for a small amount"
 
 
 class Bloomelle(Creature, HealCapability):
@@ -18,7 +18,7 @@ class Bloomelle(Creature, HealCapability):
         return f"{self.name} uses Petal Dance!"
 
     def heal(self) -> str:
-        return f"{self.name} uses Healing Pollen!"
+        return f"{self.name} heals itself and others for a large amount"
 
 
 class Shiftling(Creature, TransformCapability):
@@ -29,16 +29,16 @@ class Shiftling(Creature, TransformCapability):
 
     def attack(self) -> str:
         if self.transformed:
-            return f"{self.name} uses Shadow Strike!"
-        return f"{self.name} uses Tackle!"
+            return f"{self.name} performs a boosted strike!"
+        return f"{self.name} attacks normally."
 
     def transform(self) -> str:
         self.transformed = True
-        return f"{self.name} shifts into a new form!"
+        return f"{self.name} shifts into a sharper form!"
 
     def revert(self) -> str:
         self.transformed = False
-        return f"{self.name} reverts to its original form!"
+        return f"{self.name} returns to normal."
 
 
 class Morphagon(Creature, TransformCapability):
@@ -49,13 +49,13 @@ class Morphagon(Creature, TransformCapability):
 
     def attack(self) -> str:
         if self.transformed:
-            return f"{self.name} uses Chaos Beam!"
-        return f"{self.name} uses Slam!"
+            return f"{self.name} unleashes a devastating morph strike!"
+        return f"{self.name} attacks normally."
 
     def transform(self) -> str:
         self.transformed = True
-        return f"{self.name} morphs into a new form!"
+        return f"{self.name} morphs into a dragonic battle form!"
 
     def revert(self) -> str:
         self.transformed = False
-        return f"{self.name} reverts to its original form!"
+        return f"{self.name} stabilizes its form."

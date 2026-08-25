@@ -1,4 +1,6 @@
-# DataDeck — Abstract Card Architecture
+*This project was created as part of the 42 Python curriculum by lhaydar.*
+
+## DataDeck:  Abstract Card Architecture
 
 A small creature-battling card game used to explore three object-oriented design
 patterns in Python. Each exercise removes a different `if/else` from the calling
@@ -55,4 +57,4 @@ no existing file changes.
 
 ---
 
-*This project was created as part of the 42 Python curriculum (Module 07).*
+

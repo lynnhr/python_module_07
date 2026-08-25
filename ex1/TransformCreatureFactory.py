@@ -9,4 +9,4 @@ class TransformCreatureFactory(CreatureFactory):
         return Shiftling("Shiftling", "Normal")
 
     def create_evolved(self) -> Morphagon:
-        return Morphagon("Morphagon", "Normal/Ghost")
+        return Morphagon("Morphagon", "Normal/Dragon")

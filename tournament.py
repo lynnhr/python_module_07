@@ -24,6 +24,7 @@ def battle(opponents: list[Opponent]) -> None:
             first, first_strategy = fighters[i]
             second, second_strategy = fighters[j]
 
+            print()
             print("* Battle *")
             print(first.describe())
             print("vs.")

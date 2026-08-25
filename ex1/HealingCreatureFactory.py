@@ -8,4 +8,4 @@ class HealingCreatureFactory(CreatureFactory):
         return Sproutling("Sproutling", "Grass")
 
     def create_evolved(self) -> Bloomelle:
-        return Bloomelle("Bloomelle", "Grass")
+        return Bloomelle("Bloomelle", "Grass/Fairy")
