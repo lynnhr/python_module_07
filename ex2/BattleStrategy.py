@@ -20,7 +20,8 @@ class BattleStrategy(ABC):
     def _reject_invalid(self, creature: Creature) -> None:
         if not self.is_valid(creature):
             raise InvalidStrategyError(
-                f"Invalid Creature '{creature.name}' for this {self.name} strategy"
+                f"Invalid Creature '{creature.name}'"
+                f"for this {self.name} strategy"
             )
 
 
@@ -45,6 +46,7 @@ class AggressiveStrategy(BattleStrategy):
 
     def act(self, creature: Creature) -> list[str]:
         self._reject_invalid(creature)
+        assert isinstance(creature, TransformCapability)
         return [creature.transform(), creature.attack(), creature.revert()]
 
 
@@ -57,4 +59,5 @@ class DefensiveStrategy(BattleStrategy):
 
     def act(self, creature: Creature) -> list[str]:
         self._reject_invalid(creature)
+        assert isinstance(creature, HealCapability)
         return [creature.attack(), creature.heal()]

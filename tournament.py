@@ -32,7 +32,9 @@ def battle(opponents: list[Opponent]) -> None:
             print("now fight!")
 
             try:
-                messages = first_strategy.act(first) + second_strategy.act(second)
+                messages = (
+                    first_strategy.act(first) + second_strategy.act(second)
+                )
             except InvalidStrategyError as error:
                 print(f"Battle error, aborting tournament: {error}")
                 return
